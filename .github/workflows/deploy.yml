@@ -33,7 +33,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: ./ytube-saver-app
-        run: npm ci
+        run: npm install
 
       - name: Build
         working-directory: ./ytube-saver-app
