@@ -13,6 +13,7 @@ const DownloaderForm: React.FC = () => {
     quality: '1080p'
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [downloadProgress, setDownloadProgress] = useState(0);
   const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
   const [status, setStatus] = useState<{
     type: 'success' | 'error' | 'info' | 'warning' | null;
@@ -129,25 +130,40 @@ const DownloaderForm: React.FC = () => {
       // Try server-side download first, fallback to client-side
       let response;
       try {
+        // Set initial downloading status
+        setDownloadProgress(10);
+        setStatus({ type: 'info', message: 'Contacting download servers...' });
         response = await DownloadService.downloadVideo(downloadRequest);
+        setDownloadProgress(50);
       } catch (serverError) {
-        console.log('Server download failed, trying client-side approach...');
+        console.log('Server download failed, trying fallback services...');
+        setDownloadProgress(30);
+        setStatus({ type: 'info', message: 'Trying alternative download methods...' });
         response = await DownloadService.clientSideDownload(url, options.format, options.quality);
+        setDownloadProgress(80);
       }
 
       if (response.success) {
+        setDownloadProgress(100);
         setStatus({ type: 'success', message: response.message });
         
+        // Reset progress after a delay
+        setTimeout(() => setDownloadProgress(0), 3000);
+        
+        // The download should already be triggered by the service
+        // No need to open in new tab as the file will download directly
         if (response.downloadUrl) {
-          // Open download URL in new tab
-          window.open(response.downloadUrl, '_blank');
+          // Optional: Log the download URL for debugging
+          console.log('Download initiated:', response.downloadUrl);
         }
       } else {
+        setDownloadProgress(0);
         setStatus({ type: 'error', message: response.message });
       }
       
     } catch (error: any) {
       console.error('Download error:', error);
+      setDownloadProgress(0);
       setStatus({ 
         type: 'error', 
         message: error.message || 'Download failed. Please try again or use the desktop version.' 
@@ -288,6 +304,19 @@ const DownloaderForm: React.FC = () => {
         {isLoading && <div className="loading-spinner"></div>}
         {isLoading ? 'Processing...' : `📥 Download ${options.format === 'video' ? 'Video' : 'Audio'}`}
       </button>
+
+      {/* Download Progress Bar */}
+      {downloadProgress > 0 && (
+        <div className="progress-container">
+          <div className="progress-bar">
+            <div 
+              className="progress-fill" 
+              style={{ width: `${downloadProgress}%` }}
+            ></div>
+          </div>
+          <div className="progress-text">{downloadProgress}%</div>
+        </div>
+      )}
 
       {/* Status Message */}
       {status.type && (
