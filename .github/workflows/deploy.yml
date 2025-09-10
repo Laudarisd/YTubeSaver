@@ -23,18 +23,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: ytube-saver-app/package-lock.json
 
       - name: Install dependencies 📥
-        run: |
-          cd ytube-saver-app
-          npm ci
+        working-directory: ./ytube-saver-app
+        run: npm ci
 
       - name: Build 🔧
-        run: |
-          cd ytube-saver-app
-          npm run build
+        working-directory: ./ytube-saver-app
+        run: npm run build
         env:
           CI: false
 
