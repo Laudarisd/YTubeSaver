@@ -7,6 +7,7 @@ A modern, responsive web application for downloading videos and audio from YouTu
 ## ✨ Features
 
 ### 🎯 Core Features
+
 - **📥 Multi-Platform Support**: Download from YouTube and Instagram
 - **🎵 Format Options**: Video (MP4) and Audio (MP3) downloads
 - **⚙️ Quality Selection**: Choose from multiple quality options (4K to 240p)
@@ -15,12 +16,14 @@ A modern, responsive web application for downloading videos and audio from YouTu
 - **🎨 Modern UI**: Dark theme with glassmorphism design
 
 ### 🛡️ Privacy & Security
+
 - **🔒 No Data Collection**: Your privacy is protected
 - **🌐 Client-Side Processing**: Runs entirely in your browser
 - **🔐 Secure**: No personal information required
 - **📝 Respectful**: Encourages legal and ethical use
 
 ### 📱 Platform Support
+
 - **🎥 YouTube**: Videos, Shorts, and Audio extraction
 - **📸 Instagram**: Posts, Reels, and Stories
 - **🖥️ Desktop**: Windows, macOS, Linux browsers
@@ -35,14 +38,17 @@ Visit the live application: **[https://laudarisd.github.io/YTubeSaver/](https://
 ## 📸 Screenshots
 
 ### Desktop View
+
 ![Desktop Screenshot](./screenshots/desktop.png)
 
 ### Mobile View
+
 ![Mobile Screenshot](./screenshots/mobile.png)
 
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **⚛️ React 18** - Modern React with hooks
 - **🎨 TypeScript** - Type-safe development
 - **💅 CSS3** - Custom styling with animations
@@ -50,6 +56,7 @@ Visit the live application: **[https://laudarisd.github.io/YTubeSaver/](https://
 - **🔄 Service Worker** - Offline functionality
 
 ### Backend (Optional)
+
 - **🟢 Node.js** or **🐍 Python** - Server runtime
 - **📦 yt-dlp** - Video downloading engine
 - **🗄️ Redis** - Queue management
@@ -85,18 +92,21 @@ YTubeSaver/
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/yourusername/YTubeSaver.git
 cd YTubeSaver
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 cd ytube-saver-app
 npm install
 ```
 
 ### 3. Start Development Server
+
 ```bash
 npm start
 ```
@@ -104,6 +114,7 @@ npm start
 The application will open at `http://localhost:3000`
 
 ### 4. Build for Production
+
 ```bash
 npm run build
 ```
@@ -111,12 +122,14 @@ npm run build
 ## 📱 Mobile Installation
 
 ### Android (Chrome)
+
 1. Visit the web app in Chrome
 2. Tap the menu button (⋮)
 3. Select "Add to Home screen"
 4. Confirm installation
 
 ### iOS (Safari)
+
 1. Visit the web app in Safari
 2. Tap the Share button
 3. Select "Add to Home Screen"
@@ -125,6 +138,7 @@ npm run build
 ## ⚙️ Configuration
 
 ### Environment Variables
+
 Create a `.env` file in the `ytube-saver-app` directory:
 
 ```env
@@ -134,6 +148,7 @@ REACT_APP_ENABLE_PWA=true
 ```
 
 ### GitHub Pages Deployment
+
 1. ✅ **Already configured!** The homepage is set to: `https://laudarisd.github.io/YTubeSaver`
 2. ✅ **GitHub Actions workflow** is ready for automatic deployment
 3. **To deploy:**
@@ -144,7 +159,7 @@ REACT_APP_ENABLE_PWA=true
    ```
 4. **Enable GitHub Pages:**
    - Go to your repository settings
-   - Navigate to "Pages" section  
+   - Navigate to "Pages" section
    - Set Source to "GitHub Actions"
    - Your app will be live at: **https://laudarisd.github.io/YTubeSaver/**
 
@@ -153,6 +168,7 @@ REACT_APP_ENABLE_PWA=true
 For full functionality, you can set up a backend server:
 
 ### Node.js Backend
+
 ```bash
 # Install yt-dlp
 pip install yt-dlp
@@ -166,6 +182,7 @@ npm install express cors helmet morgan yt-dlp-wrap
 ```
 
 ### Python Backend
+
 ```bash
 # Install dependencies
 pip install fastapi uvicorn yt-dlp python-multipart
@@ -178,11 +195,13 @@ pip install fastapi uvicorn yt-dlp python-multipart
 Due to browser security (CORS) restrictions, the web version has limitations:
 
 ### Client-Side Limitations
+
 - ❌ Direct video downloading (blocked by CORS)
 - ❌ Cookie handling for restricted content
 - ❌ Bypassing rate limiting
 
 ### Recommended Solutions
+
 1. **🖥️ Desktop App**: Use local installation with full features
 2. **🔧 Backend API**: Deploy your own backend server
 3. **🔗 Safe Redirects**: Redirect to legitimate download services
@@ -191,16 +210,19 @@ Due to browser security (CORS) restrictions, the web version has limitations:
 ## 📋 Usage Guide
 
 ### 1. Enter Video URL
+
 - Paste YouTube or Instagram URL
 - Support for various URL formats
 - Auto-detection of platform
 
 ### 2. Select Options
+
 - Choose Video (MP4) or Audio (MP3)
 - Select quality from available options
 - Preview video information
 
 ### 3. Download
+
 - Click download button
 - Follow platform-specific instructions
 - Respect copyright and terms of service
@@ -210,6 +232,7 @@ Due to browser security (CORS) restrictions, the web version has limitations:
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
 
 ### Development Setup
+
 ```bash
 # Fork and clone the repository
 git clone https://github.com/yourusername/YTubeSaver.git
@@ -233,12 +256,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## ⚖️ Legal & Ethical Use
 
 ### Important Guidelines
+
 - ✅ **Respect Copyright**: Only download content you have rights to
 - ✅ **Follow Terms**: Respect YouTube and Instagram Terms of Service
 - ✅ **Personal Use**: Use for personal, non-commercial purposes
 - ✅ **Content Creator Rights**: Support creators through official channels
 
 ### Disclaimer
+
 This tool is provided for educational and personal use only. Users are responsible for complying with applicable laws and platform terms of service.
 
 ## 🐛 Troubleshooting
@@ -246,22 +271,27 @@ This tool is provided for educational and personal use only. Users are responsib
 ### Common Issues
 
 #### "Network Error" or "CORS Error"
+
 - **Cause**: Browser security restrictions
 - **Solution**: Use the desktop version or deploy backend API
 
 #### "Video Unavailable"
+
 - **Cause**: Geographic restrictions or private content
 - **Solution**: Ensure content is publicly accessible
 
 #### "Quality Not Available"
+
 - **Cause**: Selected quality doesn't exist for this video
 - **Solution**: Choose a different quality option
 
 #### Mobile Installation Issues
+
 - **Cause**: PWA not properly configured
 - **Solution**: Use HTTPS and valid manifest.json
 
 ### Getting Help
+
 1. Check the [Issues](https://github.com/yourusername/YTubeSaver/issues) page
 2. Create a new issue with detailed description
 3. Include browser version and error messages
@@ -276,18 +306,21 @@ This tool is provided for educational and personal use only. Users are responsib
 ## 📈 Roadmap
 
 ### Version 1.1.0
+
 - [ ] Batch download support
 - [ ] Download history
 - [ ] Custom download locations
 - [ ] More platform support (TikTok, Twitter)
 
 ### Version 1.2.0
+
 - [ ] User accounts and sync
 - [ ] Advanced filtering options
 - [ ] Download scheduling
 - [ ] API rate limiting dashboard
 
 ### Version 2.0.0
+
 - [ ] Electron desktop app
 - [ ] Browser extension
 - [ ] Premium features
