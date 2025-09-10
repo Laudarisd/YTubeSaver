@@ -41,6 +41,13 @@ jobs:
         env:
           CI: false
 
+      - name: Prepare deployment
+        run: |
+          touch ./ytube-saver-app/build/.nojekyll
+          ls -la ./ytube-saver-app/build/
+          echo "Contents of build directory:"
+          find ./ytube-saver-app/build -type f -name "*.html" -exec echo {} \;
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
