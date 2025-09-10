@@ -5,8 +5,9 @@ import { DownloadService } from '../services/downloadService';
 const testUrl = 'https://www.youtube.com/shorts/Zdscg2Q2IQQ?feature=share';
 
 console.log('Testing URL:', testUrl);
-console.log('Is YouTube URL:', DownloadService.isYouTubeUrl(testUrl));
-console.log('Is Instagram URL:', DownloadService.isInstagramUrl(testUrl));
+console.log('Is Valid URL:', DownloadService.isValidUrl(testUrl));
+console.log('Platform:', DownloadService.getPlatform(testUrl));
+console.log('Video ID:', DownloadService.extractVideoId(testUrl));
 
 // Test other YouTube formats
 const testUrls = [
@@ -21,8 +22,9 @@ const testUrls = [
 
 testUrls.forEach(url => {
   console.log(`URL: ${url}`);
-  console.log(`  YouTube: ${DownloadService.isYouTubeUrl(url)}`);
-  console.log(`  Instagram: ${DownloadService.isInstagramUrl(url)}`);
+  console.log(`  Valid: ${DownloadService.isValidUrl(url)}`);
+  console.log(`  Platform: ${DownloadService.getPlatform(url)}`);
+  console.log(`  Video ID: ${DownloadService.extractVideoId(url)}`);
   console.log('---');
 });
 

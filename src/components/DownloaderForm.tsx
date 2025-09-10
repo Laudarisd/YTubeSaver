@@ -53,7 +53,7 @@ const DownloaderForm: React.FC = () => {
   }, [url, supportedPlatforms]);
 
   const validateUrl = (url: string): boolean => {
-    return DownloadService.isYouTubeUrl(url) || DownloadService.isInstagramUrl(url);
+    return DownloadService.isValidUrl(url);
   };
 
   const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,7 +98,7 @@ const DownloaderForm: React.FC = () => {
         thumbnail: '/logo512.svg',
         duration: 'Unknown',
         uploader: 'Unknown',
-        platform: DownloadService.isYouTubeUrl(url) ? 'youtube' : 'instagram',
+        platform: DownloadService.getPlatform(url) || 'youtube',
         formats: []
       });
     } finally {
@@ -127,21 +127,12 @@ const DownloaderForm: React.FC = () => {
         quality: options.quality
       };
 
-      // Try server-side download first, fallback to client-side
-      let response;
-      try {
-        // Set initial downloading status
-        setDownloadProgress(10);
-        setStatus({ type: 'info', message: 'Contacting download servers...' });
-        response = await DownloadService.downloadVideo(downloadRequest);
-        setDownloadProgress(50);
-      } catch (serverError) {
-        console.log('Server download failed, trying fallback services...');
-        setDownloadProgress(30);
-        setStatus({ type: 'info', message: 'Trying alternative download methods...' });
-        response = await DownloadService.clientSideDownload(url, options.format, options.quality);
-        setDownloadProgress(80);
-      }
+      // Set initial downloading status
+      setDownloadProgress(10);
+      setStatus({ type: 'info', message: 'Contacting download servers...' });
+      const response = await DownloadService.downloadVideo(downloadRequest, (progress) => {
+        setDownloadProgress(progress);
+      });
 
       if (response.success) {
         setDownloadProgress(100);
@@ -151,9 +142,7 @@ const DownloaderForm: React.FC = () => {
         setTimeout(() => setDownloadProgress(0), 3000);
         
         // The download should already be triggered by the service
-        // No need to open in new tab as the file will download directly
         if (response.downloadUrl) {
-          // Optional: Log the download URL for debugging
           console.log('Download initiated:', response.downloadUrl);
         }
       } else {
