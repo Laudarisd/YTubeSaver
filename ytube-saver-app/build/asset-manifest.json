@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/YTubeSaver/static/css/main.af04ff0d.css",
-    "main.js": "/YTubeSaver/static/js/main.fe9fc724.js",
+    "main.js": "/YTubeSaver/static/js/main.b79c2625.js",
     "index.html": "/YTubeSaver/index.html",
     "main.af04ff0d.css.map": "/YTubeSaver/static/css/main.af04ff0d.css.map",
-    "main.fe9fc724.js.map": "/YTubeSaver/static/js/main.fe9fc724.js.map"
+    "main.b79c2625.js.map": "/YTubeSaver/static/js/main.b79c2625.js.map"
   },
   "entrypoints": [
     "static/css/main.af04ff0d.css",
-    "static/js/main.fe9fc724.js"
+    "static/js/main.b79c2625.js"
   ]
 }
