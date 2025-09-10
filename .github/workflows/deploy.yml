@@ -2,7 +2,7 @@ name: Deploy YTubeSaver to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 # Allow only one concurrent deployment
 concurrency:
