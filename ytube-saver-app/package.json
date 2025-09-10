@@ -2,7 +2,7 @@
   "name": "ytube-saver-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/YTubeSaver",
+  "homepage": "https://laudarisd.github.io/YTubeSaver",
   "dependencies": {
     "@types/node": "^16.18.68",
     "@types/react": "^18.2.42",

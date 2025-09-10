@@ -28,7 +28,9 @@ A modern, responsive web application for downloading videos and audio from YouTu
 
 ## 🚀 Live Demo
 
-Visit the live application: [https://yourusername.github.io/YTubeSaver](https://yourusername.github.io/YTubeSaver)
+Visit the live application: **[https://laudarisd.github.io/YTubeSaver/](https://laudarisd.github.io/YTubeSaver/)**
+
+> 🎉 **Try it now!** Paste any YouTube or Instagram URL and see the magic happen!
 
 ## 📸 Screenshots
 
@@ -132,15 +134,19 @@ REACT_APP_ENABLE_PWA=true
 ```
 
 ### GitHub Pages Deployment
-1. Update `homepage` in `package.json`:
-```json
-{
-  "homepage": "https://yourusername.github.io/YTubeSaver"
-}
-```
-
-2. Enable GitHub Pages in repository settings
-3. Push to main branch - automatic deployment via GitHub Actions
+1. ✅ **Already configured!** The homepage is set to: `https://laudarisd.github.io/YTubeSaver`
+2. ✅ **GitHub Actions workflow** is ready for automatic deployment
+3. **To deploy:**
+   ```bash
+   git add .
+   git commit -m "Deploy YTubeSaver app"
+   git push origin master
+   ```
+4. **Enable GitHub Pages:**
+   - Go to your repository settings
+   - Navigate to "Pages" section  
+   - Set Source to "GitHub Actions"
+   - Your app will be live at: **https://laudarisd.github.io/YTubeSaver/**
 
 ## 🔧 Backend Setup (Optional)
 
