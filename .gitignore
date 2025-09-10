@@ -1,0 +1,332 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ===== DEPENDENCIES =====
+/node_modules
+/.pnp
+.pnp.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+
+# ===== PRODUCTION BUILDS =====
+/build
+/dist
+*.tgz
+*.tar.gz
+
+# ===== RUNTIME DATA =====
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ===== COVERAGE DIRECTORY =====
+/coverage
+*.lcov
+.nyc_output
+
+# ===== ESLINT CACHE =====
+.eslintcache
+
+# ===== MISC =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===== LOGS =====
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.grunt
+
+# ===== ENVIRONMENT VARIABLES & SECRETS =====
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# API Keys and Secrets
+*.key
+*.pem
+*.p12
+*.pfx
+config/secrets.json
+config/keys.json
+secrets/
+private/
+
+# ===== COOKIES & SESSION DATA =====
+cookies.txt
+*.cookies
+session_data/
+auth_tokens/
+
+# ===== DATABASE FILES =====
+*.db
+*.sqlite
+*.sqlite3
+database.json
+db.json
+
+# ===== CACHE DIRECTORIES =====
+.cache/
+.parcel-cache/
+.next/
+out/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+
+# ===== IDE & EDITOR FILES =====
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# JetBrains IDEs
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===== OPERATING SYSTEM FILES =====
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===== TEMPORARY FILES =====
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*.orig
+
+# ===== PYTHON (for backend) =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ===== SECURITY & SENSITIVE FILES =====
+# Private keys
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.cer
+*.crt
+*.der
+
+# Configuration files with secrets
+config/production.json
+config/staging.json
+.secrets
+.credentials
+
+# Authentication files
+auth.json
+firebase-adminsdk-*.json
+service-account-*.json
+*.serviceaccount
+gcloud-service-key.json
+
+# SSL certificates
+ssl/
+certificates/
+*.crt
+*.ca-bundle
+
+# ===== DOWNLOADED FILES =====
+downloads/
+*.mp4
+*.mp3
+*.avi
+*.mkv
+*.webm
+*.m4a
+*.wav
+*.flac
+media/
+video_downloads/
+audio_downloads/
+
+# ===== DOCKER =====
+Dockerfile.prod
+docker-compose.override.yml
+.dockerignore
+
+# ===== BACKUP FILES =====
+*.backup
+*.bak
+*.orig
+backup/
+backups/
+
+# ===== TESTING =====
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+test-results.xml
+junit.xml
+
+# ===== DEPLOYMENT =====
+deploy.sh
+deployment/
+.deploy/
+.kubernetes/
+k8s-secrets/
+
+# ===== ANALYTICS & TRACKING =====
+.vercel
+.netlify
+.firebase/
+
+# ===== PACKAGE MANAGERS =====
+package-lock.json
+yarn.lock
+.yarn/
+.pnp.*
+.yarn-integrity
+
+# ===== MISC SECURITY =====
+.htaccess
+.htpasswd
+wp-config.php
+config.php
+
+# ===== USER-SPECIFIC =====
+# Personal notes
+notes.txt
+todo.txt
+TODO.md
+NOTES.md
+personal/
+
+# User uploaded content
+uploads/
+user_data/
+
+# ===== DEVELOPMENT TOOLS =====
+.storybook/
+chromatic-build-*
+build-storybook.log
+
+# Bundle analyzer
+bundle-report.html
+stats.json
+
+# ===== RUNTIME & PROCESS FILES =====
+.pid
+*.pid
+*.seed
+*.pid.lock
+
+# ===== IGNORE SPECIFIC TO THIS PROJECT =====
+# YouTube downloader specific
+ytdlp_cache/
+yt-dlp_cache/
+youtube-dl_cache/
+*.part
+*.ytdl
+
+# Instagram specific  
+instagram_cache/
+insta_session/
+
+# Proxy configuration
+proxies.txt
+proxy_list.json
+
+# Rate limiting data
+rate_limit.json
+usage_stats.json

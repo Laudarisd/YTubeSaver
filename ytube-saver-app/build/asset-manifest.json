@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/YTubeSaver/static/css/main.a89a4c0b.css",
+    "main.js": "/YTubeSaver/static/js/main.e7ea28a6.js",
+    "index.html": "/YTubeSaver/index.html",
+    "main.a89a4c0b.css.map": "/YTubeSaver/static/css/main.a89a4c0b.css.map",
+    "main.e7ea28a6.js.map": "/YTubeSaver/static/js/main.e7ea28a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a89a4c0b.css",
+    "static/js/main.e7ea28a6.js"
+  ]
+}
